@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
@@ -36,52 +37,47 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       '+81 123 446 789',
                       style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20),
-                    )
-                  ],
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20,
+                      ),
+                    ),
+                  )),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'robert@email.com',
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20),
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'robert@email.com',
-                      style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20),
-                    ),
-                  ],
-                ),
-              )
             ],
           ),
         ),
